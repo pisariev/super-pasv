@@ -39,5 +39,4 @@ class UsersHelper {
     }
 }
 
-
 export default UsersHelper;

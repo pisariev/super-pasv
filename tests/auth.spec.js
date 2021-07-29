@@ -29,6 +29,7 @@ describe('auth', function () {
             expect(authHelper.response.body.token).not.to.be.undefined;
         });
     });
+
     describe('log in with wrong credentials should return error', function () {
         const authHelper = new AuthHelper();
 
@@ -45,3 +46,4 @@ describe('auth', function () {
         });
     });
 });
+
