@@ -47,32 +47,32 @@ describe( 'users', function () {
         });
     });
 
-    describe('get all user', function() {
-        const usersHelper = new UsersHelper();
+     describe('get all user', function() {
+         const usersHelper = new UsersHelper();
 
-        before(async function () {
-             for await(const user of Array(3)) {
-                 await usersHelper.create();
-             }
-            await usersHelper.getAll();
-        });
+         before(async function () {
+              for await(const user of Array(3)) {
+                  await usersHelper.create();
+              }
+             await usersHelper.getAll();
+         });
 
-        it('response status code is 200', function () {
-            expect(usersHelper.response.statusCode).to.eq(200);
-        });
+         it('response status code is 200', function () {
+             expect(usersHelper.response.statusCode).to.eq(200);
+         });
 
-        it('response body contains list of 3 or more items', function () {
-            expect(usersHelper.response.body.length).to.be.at.least(3);
-        });
+         it('response body contains list of 3 or more items', function () {
+             expect(usersHelper.response.body.length).to.be.at.least(3);
+         });
 
-        it('response body list item contains id', function () {
-            expect(getRandomItem(usersHelper.response.body).id)
-                .not.to.be.undefined;
-        });
+         it('response body list item contains id', function () {
+             expect(getRandomItem(usersHelper.response.body).id)
+                 .not.to.be.undefined;
+         });
 
-        it('response body list item contains amount', function () {
-            expect(getRandomItem(usersHelper.response.body).amount)
-                .not.to.be.undefined;
+         it('response body list item contains amount', function () {
+             expect(getRandomItem(usersHelper.response.body).amount)
+                 .not.to.be.undefined;
         });
     });
 
