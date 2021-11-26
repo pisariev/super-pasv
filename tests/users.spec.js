@@ -39,11 +39,11 @@ describe( 'users', function () {
         });
 
         it('response body contains user id', function () {
-            expect(usersHelper.response.body.id).to.be.undefined;
+            expect(usersHelper.response.body.id).not.to.be.undefined;
         });
 
         it('response body contains amount', function () {
-            expect(usersHelper.response.body.amount).to.be.undefined;
+            expect(usersHelper.response.body.amount).not.to.be.undefined;
         });
     });
 
