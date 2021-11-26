@@ -21,7 +21,7 @@ describe('auth', function () {
            await authHelper.post(credentials.valid.login, credentials.valid.password)
         });
 
-        it('responce status code is 200', function () {
+        it('response status code is 200', function () {
             expect(authHelper.response.statusCode).to.eq(200);
         });
 
